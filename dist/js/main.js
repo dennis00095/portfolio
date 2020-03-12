@@ -5,34 +5,32 @@ const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
 
-
 //Set the state of the menu
 
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
-function toggleMenu(){
-    if(!showMenu){
-        menuBtn.classList.add('close');
-        menu.classList.add('show');
-        menuNav.classList.add('show');
-        menuBranding.classList.add('show');
-        navItems.forEach(item => item.classList.add ('show'));
+function toggleMenu() {
+	if (!showMenu) {
+		menuBtn.classList.add('close');
+		menu.classList.add('show');
+		menuNav.classList.add('show');
+		menuBranding.classList.add('show');
+		navItems.forEach((item) => item.classList.add('show'));
 
-         //setting menu state
-        
-         showMenu = true;
-    } else{
-        menuBtn.classList.remove('close');
-        menu.classList.remove('show');
-        menuNav.classList.remove('show');
-        menuBranding.classList.remove('show');
-        navItems.forEach(item => item.classList.add ('show'));
+		//setting menu state
 
-        //setting menu state
-        
-        showMenu = false;
+		showMenu = true;
+	} else {
+		menuBtn.classList.remove('close');
+		menu.classList.remove('show');
+		menuNav.classList.remove('show');
+		menuBranding.classList.remove('show');
+		navItems.forEach((item) => item.classList.remove('show'));
 
-    }
+		//setting menu state
+
+		showMenu = false;
+	}
 }
