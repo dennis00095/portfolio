@@ -6,7 +6,7 @@
 @include mediaLg {
 }
 
-//Medium Screens/smartphones
+//Medium Screens
 @include mediaMd {
 	main {
 		align-items: center;
@@ -39,14 +39,20 @@
 		transform: translate3d(100%, 0, 0);
 
 		.portrait {
-			background: url('/dist/img/DSCN4739.JPG');
+			background: url('');
 			width: 150px;
 			height: 150px;
 		}
 	}
+
+	.about-info {
+		grid-template-areas: 'bioimage' 'biography' 'job1' 'job2' 'job3';
+
+		grid-template-columns: 1fr;
+	}
 }
 
-//For Small Screens
+//For Small Screens/smartphones
 @include mediaSm {
 	main#home h1 {
 		margin-top: 10vh;
