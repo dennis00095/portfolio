@@ -33,7 +33,7 @@
 			// rotate the third line
 			&:nth-child(3) {
 				transform: rotate(-45deg) translate(8px, -5px);
-				background: greenyellow;
+				background: #71ff2f;
 			}
 		}
 	}
@@ -41,17 +41,16 @@
 
 //Overlays for the Menu
 
-.manu {
+.menu {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	opacity: 0.9;
+	opacity: 1;
 	visibility: hidden;
 
 	&.show {
 		visibility: visible;
 	}
-
 	&-branding,
 	&-nav {
 		display: flex;
@@ -67,23 +66,66 @@
 	&-nav {
 		margin: 0;
 		padding: 0;
-		background: darken($primary-color, 5);
+		background: rgb(31, 9, 6);
 		list-style: none;
-		transform: translate3d(0, -100, 0);
+		transform: translate3d(-50%, 100%, 0);
 		@include easeOut;
-
+		// links slide in from bottom right-center
 		&.show {
 			transform: translate3d(0, 0, 0);
 		}
 	}
-	//brading side
+
+	//the branding side
 	&-branding {
-		background: $primary-color;
-		transform: translate3d(0, 100, 0);
+		background: #02021de7;
+		transform: translate3d(50%, -100%, 0);
 		@include easeOut;
 
 		&.show {
 			transform: translate3d(0, 0, 0);
 		}
+
+		.portrait {
+			width: 250px;
+			height: 250px;
+			background-image: url('../dist/img/portrait.JPG');
+			border: solid 3px greenyellow;
+		}
+	}
+	.nav-item {
+		//slide links from right-top-center
+		transform: translate3d(0, -500px, 0);
+		@include easeOut;
+
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+
+		&.current > a {
+			color: yellowgreen;
+		}
+	}
+
+	.nav-link {
+		display: inline-block;
+		font-size: 25px;
+		font-weight: 250;
+		padding: 0 1rem;
+		color: rgb(236, 185, 240);
+		text-decoration: none;
+		font-style: round($number: 0);
+		position: relative;
+		@include easeOut;
+
+		&:hover {
+			color: blue;
+		}
+	}
+}
+
+@for $x from 1 through 4 {
+	.nav-item:nth-child(#{$x}) {
+		transition-delay: $x * 0.2s;
 	}
 }
