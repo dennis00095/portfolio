@@ -11,7 +11,7 @@ body {
 	color: set-text-color($primary-color);
 	height: 100%;
 	margin: 0;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	line-height: 1.5;
 }
 
@@ -47,10 +47,11 @@ header {
 }
 .text-secondary {
 	color: $seconary-color;
-	font-size: 80px;
+	font-size: 65px;
 }
 .mwonge {
 	color: rgb(211, 176, 236);
+	font-style: italic;
 }
 
 main {
@@ -81,7 +82,7 @@ main {
 //About page
 .about-info {
 	display: grid;
-	grid-gap: 40px;
+	grid-gap: 35px;
 	grid-template-areas: 'bioimage bio biography' 'job1 job2 job3';
 	grid-template-columns: 1fr 1fr 1fr;
 }
@@ -89,6 +90,8 @@ main {
 .bio-image {
 	grid-area: bioimage;
 	margin: auto;
+	height: 250px;
+	width: 250px;
 	border-radius: 50%;
 	border: $seconary-color 3px solid;
 }
@@ -127,6 +130,7 @@ main {
 
 	img {
 		width: 100%;
+		height: 100%;
 		border: 3px white solid;
 
 		&:hover {
