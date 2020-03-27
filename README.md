@@ -1,1 +1,1 @@
-simple personal portfolio website
+This is a simple personal portfolio website for a web developer
